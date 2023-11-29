@@ -24,24 +24,92 @@
   --body-background-colour: var(--colour-peppermint);
 }
 
-/*
-  PAGE / BODY
-*/
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
+  color: #000000;
+  font-family: sans-serif;
+  /* background-color: #65f5ff; */
+  background: url("./images/istockphoto-157315275-612x612.jpg") center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /* display: flex;  */
+  /* justify-content: center; */
+}
+#Tablet{
+  width: 600px;
+  padding: 40px;
+  border-radius: 15px;
+  background-color: #a2a2a0;
+  margin: 20px auto 20px auto;
+}
+main {
+  
+  /* margin-top: 50px; */
+  /* margin-bottom: 50px; */
 }
 
-main {
-  min-height: 100vh;
+main h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
+main ul.quests {
+  list-style-type: none;
+  text-align: center;
+  margin: 0px;
+  padding: 0;
+}
+main ul.quests li {
+  margin: 0px 0px 10px 10px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #a2a2a0;
+  text-align: center;
+  font-size: 15px;
+  border: 5px solid #898b8b;
+}
+main ul.quests li a:hover {
+  color: #002031;
+}
+button {
+  cursor: pointer;
+}
+input[type="text"] {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+input[type="submit"] {
+  background-color: #898b8b;
+  border: none;
+  color: white;
+  padding: 9px 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+ main ul.quests li button {
+  background-color: rgb(120, 119, 120);
+  border-radius: 3px;
+  border-style: none;
+  color: #e4e4e2;
+  font-size: 12px;
+  line-height: 1;
+  overflow: hidden;
+  padding: 10px 10px 10px;
+  text-align: center;
+  touch-action: manipulation;
+}
+.handy {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
-
-
+.handimage {
+  height: 400px;
+  transform: translate(-160px, -800px);
+}
+.handquillimage {
+  transform: translate(400px, -800px) rotate(90deg);
+}
 /****** Screen reader text utility clsas *******/
 .sr-only {
   position: absolute;
