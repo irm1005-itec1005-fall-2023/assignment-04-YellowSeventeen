@@ -99,6 +99,15 @@ input[type="submit"] {
   text-align: center;
   touch-action: manipulation;
 }
+main ul.quests li input[type="checkbox"] {
+  margin-right: 0px;
+}
+
+main ul.quests li label {
+  font-size: 15px;
+  color: #000000;
+  margin-left: 5px;
+}
 .handy {
   display: flex;
   justify-content: center;

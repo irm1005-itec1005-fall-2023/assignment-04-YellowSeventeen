@@ -52,29 +52,44 @@ function addQuest(event) {
   console.log("adding quest: " + whatquesttext)
 }
 function renderList() {
+  quest.innerHTML = '';
   if (QuestsListed.length > 0) {
-  for (let i = (QuestsListed.length - 1); i < QuestsListed.length; i++) {
+    for (let i = 0; i < QuestsListed.length; i++) {
     let listItem = document.createElement("li");
     let temppara = document.createElement("p");
     temppara.textContent = QuestsListed[i];
     listItem.appendChild(temppara);
     console.log(listItem)
+    let scratchmark = document.createElement("input")
+    scratchmark.type = "checkbox";
+    scratchmark.id = "questCheckbox" + i;
+    scratchmark.addEventListener("change", function () {
+      markQuestAsDone(i);
+    });
+    let scratchmarkappear = document.createElement("label");
+    scratchmarkappear.htmlFor = "questCheckbox " + i;
+    scratchmarkappear.textContent = "Hast our great hero accomplished this quest?";
     let Donequest = document.createElement("button")
-    
+    listItem.appendChild(scratchmark);
+    listItem.appendChild(scratchmarkappear);
     Donequest.textContent = "This adventure must now be forgotten";
-    Donequest.id = "quest" + (i+1);
+    Donequest.addEventListener("click", function() {
+      removeQuest(i);
+    });
+
     listItem.appendChild(Donequest);
     quest.appendChild(listItem);
     console.log(Donequest.id); 
   }
   } 
 }
-function checkQuest() {
-  if (condition) {
-    
-  }
+function removeQuest(i) {
+  QuestsListed.splice(i, 1);
+  renderList();
 }
-
+function markQuestAsDone(i) {
+  
+}
 
 ObtainedQuest.addEventListener("submit", addQuest);
 renderList();
