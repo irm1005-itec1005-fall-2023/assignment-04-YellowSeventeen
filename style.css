@@ -99,14 +99,16 @@ input[type="submit"] {
   text-align: center;
   touch-action: manipulation;
 }
-main ul.quests li input[type="checkbox"] {
-  margin-right: 0px;
-}
-
 main ul.quests li label {
-  font-size: 15px;
-  color: #000000;
-  margin-left: 5px;
+  position: relative;
+  cursor: pointer;
+  line-height: 1.5;
+}
+main ul.quests li input[type="checkbox"] {
+  content: '';
+}
+main ul.quests li input[type="checkbox"]:checked {
+  background: url("images/ive-always-loved-making-magic-circles-but-im-kind-of-v0-pftb1krxptu91.png") center/contain no-repeat;
 }
 .handy {
   display: flex;
